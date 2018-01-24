@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		0E76EF20B28C516FD9635FF6 /* Pods_Tindog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F99C06A813BE2F70A7C208B /* Pods_Tindog.framework */; };
 		1F6A76EC2017841800D340F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6A76EB2017841800D340F5 /* AppDelegate.swift */; };
-		1F6A76EE2017841800D340F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6A76ED2017841800D340F5 /* ViewController.swift */; };
 		1F6A76F12017841800D340F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6A76EF2017841800D340F5 /* Main.storyboard */; };
 		1F6A76F32017841800D340F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F6A76F22017841800D340F5 /* Assets.xcassets */; };
 		1F6A76F62017841800D340F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6A76F42017841800D340F5 /* LaunchScreen.storyboard */; };
+		1F6A77062018EC3700D340F5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6A77052018EC3700D340F5 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0F99C06A813BE2F70A7C208B /* Pods_Tindog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tindog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6A76E82017841800D340F5 /* Tindog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tindog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6A76EB2017841800D340F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1F6A76ED2017841800D340F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1F6A76F02017841800D340F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F6A76F22017841800D340F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F6A76F52017841800D340F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F6A76F72017841800D340F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F6A77052018EC3700D340F5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3EE1F43EA53A0FA1E43A0536 /* Pods-Tindog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tindog.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tindog/Pods-Tindog.release.xcconfig"; sourceTree = "<group>"; };
 		85D13CC427A91FD9507C2392 /* Pods-Tindog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tindog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tindog/Pods-Tindog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,14 +61,22 @@
 		1F6A76EA2017841800D340F5 /* Tindog */ = {
 			isa = PBXGroup;
 			children = (
+				1F6A77042018EBDF00D340F5 /* Controllers */,
 				1F6A76EB2017841800D340F5 /* AppDelegate.swift */,
-				1F6A76ED2017841800D340F5 /* ViewController.swift */,
 				1F6A76EF2017841800D340F5 /* Main.storyboard */,
 				1F6A76F22017841800D340F5 /* Assets.xcassets */,
 				1F6A76F42017841800D340F5 /* LaunchScreen.storyboard */,
 				1F6A76F72017841800D340F5 /* Info.plist */,
 			);
 			path = Tindog;
+			sourceTree = "<group>";
+		};
+		1F6A77042018EBDF00D340F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F6A77052018EC3700D340F5 /* HomeViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		48BDF8C06F57AD8CF844D98F /* Pods */ = {
@@ -217,8 +225,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F6A76EE2017841800D340F5 /* ViewController.swift in Sources */,
 				1F6A76EC2017841800D340F5 /* AppDelegate.swift in Sources */,
+				1F6A77062018EC3700D340F5 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
