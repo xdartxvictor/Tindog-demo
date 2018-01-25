@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E76EF20B28C516FD9635FF6 /* Pods_Tindog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F99C06A813BE2F70A7C208B /* Pods_Tindog.framework */; };
 		1F0E7CED201A46390053716F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E7CEC201A46390053716F /* LoginViewController.swift */; };
+		1F0E7CF0201A551C0053716F /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E7CEF201A551C0053716F /* UIViewExt.swift */; };
 		1F6A76EC2017841800D340F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6A76EB2017841800D340F5 /* AppDelegate.swift */; };
 		1F6A76F12017841800D340F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6A76EF2017841800D340F5 /* Main.storyboard */; };
 		1F6A76F32017841800D340F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F6A76F22017841800D340F5 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		0F99C06A813BE2F70A7C208B /* Pods_Tindog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tindog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F0E7CEC201A46390053716F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1F0E7CEF201A551C0053716F /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		1F6A76E82017841800D340F5 /* Tindog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tindog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6A76EB2017841800D340F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F6A76F02017841800D340F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F0E7CEE201A54F40053716F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1F0E7CEF201A551C0053716F /* UIViewExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1F6A76DF2017841800D340F5 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +73,7 @@
 		1F6A76EA2017841800D340F5 /* Tindog */ = {
 			isa = PBXGroup;
 			children = (
+				1F0E7CEE201A54F40053716F /* Extensions */,
 				1F6A77042018EBDF00D340F5 /* Controllers */,
 				1F6A76EB2017841800D340F5 /* AppDelegate.swift */,
 				1F6A76EF2017841800D340F5 /* Main.storyboard */,
@@ -228,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F0E7CF0201A551C0053716F /* UIViewExt.swift in Sources */,
 				1F0E7CED201A46390053716F /* LoginViewController.swift in Sources */,
 				1F6A76EC2017841800D340F5 /* AppDelegate.swift in Sources */,
 				1F6A77062018EC3700D340F5 /* HomeViewController.swift in Sources */,
