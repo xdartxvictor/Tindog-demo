@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import RevealingSplashView
+
+
 class NavigationImageView : UIImageView{
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         return CGSize(width: 76, height: 39)
@@ -18,9 +21,17 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var homeWrapper: UIStackView!
     @IBOutlet weak var likeImage: UIImageView!
     
+    let revealingSplashScreen = RevealingSplashView(iconImage: UIImage(named:"splash_icon")!, iconInitialSize: CGSize(width:80, height:80), backgroundColor: UIColor.white)
+    
     @IBOutlet weak var nopeImage: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addSubview(self.revealingSplashScreen)
+        
+        self.revealingSplashScreen.animationType = SplashAnimationType.popAndZoomOut
+        self.revealingSplashScreen.startAnimation()
         
         let titleView = NavigationImageView()
         titleView.image = UIImage(named:"Actions")
@@ -28,8 +39,11 @@ class HomeViewController: UIViewController {
         
         let homeGR = UIPanGestureRecognizer(target: self, action: #selector(cardDragged(gestureRecognizer:)))
         self.cardView.addGestureRecognizer(homeGR)
+        
+        
         // Do any additional setup after loading the view.
     }
+    
     @objc func cardDragged(gestureRecognizer : UIPanGestureRecognizer){
         let cardPoint = gestureRecognizer.translation(in: view)
         self.cardView.center = CGPoint(x: self.view.bounds.width / 2 + cardPoint.x , y: self.view.bounds.height / 2 + cardPoint.y)
