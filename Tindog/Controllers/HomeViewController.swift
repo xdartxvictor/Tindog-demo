@@ -88,10 +88,11 @@ class HomeViewController: UIViewController {
         if self.cardView.center.x < (self.view.bounds.width / 2 - 100){
             self.nopeImage.alpha = min(abs(xFromCenter) / 100, 1)
         }
+        
+            
         if self.cardView.center.x > (self.view.bounds.width / 2 + 100){
             self.likeImage.alpha = min(abs(xFromCenter) / 100, 1)
         }
-        
         
         
         
