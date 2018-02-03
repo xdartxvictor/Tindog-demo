@@ -18,6 +18,7 @@
 		1F6A76F62017841800D340F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6A76F42017841800D340F5 /* LaunchScreen.storyboard */; };
 		1F6A77062018EC3700D340F5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6A77052018EC3700D340F5 /* HomeViewController.swift */; };
 		1F6C555420261C54007C9242 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C555320261C54007C9242 /* ProfileViewController.swift */; };
+		1F6C555720264C2C007C9242 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C555620264C2C007C9242 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		1F6A76F72017841800D340F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F6A77052018EC3700D340F5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F6C555320261C54007C9242 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1F6C555620264C2C007C9242 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		3EE1F43EA53A0FA1E43A0536 /* Pods-Tindog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tindog.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tindog/Pods-Tindog.release.xcconfig"; sourceTree = "<group>"; };
 		85D13CC427A91FD9507C2392 /* Pods-Tindog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tindog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tindog/Pods-Tindog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 		1F6A76EA2017841800D340F5 /* Tindog */ = {
 			isa = PBXGroup;
 			children = (
+				1F6C555520264C15007C9242 /* Models */,
 				1F0E7CFC201BFF720053716F /* Services */,
 				1F0E7CEE201A54F40053716F /* Extensions */,
 				1F6A77042018EBDF00D340F5 /* Controllers */,
@@ -108,6 +111,14 @@
 				1F6C555320261C54007C9242 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1F6C555520264C15007C9242 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F6C555620264C2C007C9242 /* UserModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		48BDF8C06F57AD8CF844D98F /* Pods */ = {
@@ -224,6 +235,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -232,6 +244,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -266,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F6C555420261C54007C9242 /* ProfileViewController.swift in Sources */,
+				1F6C555720264C2C007C9242 /* UserModel.swift in Sources */,
 				1F0E7CF0201A551C0053716F /* UIViewExt.swift in Sources */,
 				1F0E7CED201A46390053716F /* LoginViewController.swift in Sources */,
 				1F6A76EC2017841800D340F5 /* AppDelegate.swift in Sources */,
