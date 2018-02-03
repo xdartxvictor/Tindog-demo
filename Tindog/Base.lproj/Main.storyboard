@@ -143,6 +143,70 @@
             </objects>
             <point key="canvasLocation" x="308" y="23.838080959520241"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="orc-T6-O8a">
+            <objects>
+                <viewController storyboardIdentifier="profileVC" id="AEA-0N-sf9" customClass="ProfileViewController" customModule="Tindog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6qG-Bp-9Cw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_bg" translatesAutoresizingMaskIntoConstraints="NO" id="ivA-UR-ROa">
+                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FKR-j0-4yq">
+                                <rect key="frame" x="60" y="50" width="255" height="325"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="234-LY-vFy">
+                                        <rect key="frame" x="37.5" y="0.0" width="180" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="Lu4-vI-XLR"/>
+                                            <constraint firstAttribute="height" constant="180" id="ejW-4L-cMT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crispeta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCc-DN-dPn">
+                                        <rect key="frame" x="97.5" y="195" width="60" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="crispeta@platzi.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vG-4c-PfO">
+                                        <rect key="frame" x="64.5" y="228.5" width="126.5" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7s-A1-71i">
+                                        <rect key="frame" x="0.0" y="260" width="255" height="65"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                        <state key="normal" title="Cerrar session" backgroundImage="login_btn_bg">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeProfileBtn:" destination="AEA-0N-sf9" eventType="touchUpInside" id="nfU-RD-pqu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FKR-j0-4yq" firstAttribute="top" secondItem="cjD-gW-MJO" secondAttribute="top" constant="30" id="Anp-Dy-HlY"/>
+                            <constraint firstItem="ivA-UR-ROa" firstAttribute="top" secondItem="cjD-gW-MJO" secondAttribute="bottom" id="CHc-aP-gQ4"/>
+                            <constraint firstItem="ivA-UR-ROa" firstAttribute="centerX" secondItem="6qG-Bp-9Cw" secondAttribute="centerX" id="Ljg-xo-T7B"/>
+                            <constraint firstItem="ivA-UR-ROa" firstAttribute="leading" secondItem="cjD-gW-MJO" secondAttribute="leading" id="bbO-8W-MKq"/>
+                            <constraint firstItem="cjD-gW-MJO" firstAttribute="trailing" secondItem="FKR-j0-4yq" secondAttribute="trailing" constant="60" id="idM-Iq-cHz"/>
+                            <constraint firstItem="cjD-gW-MJO" firstAttribute="bottom" secondItem="ivA-UR-ROa" secondAttribute="bottom" id="jce-l7-ufT"/>
+                            <constraint firstItem="cjD-gW-MJO" firstAttribute="trailing" secondItem="ivA-UR-ROa" secondAttribute="trailing" id="tdm-1q-3ge"/>
+                            <constraint firstItem="FKR-j0-4yq" firstAttribute="leading" secondItem="cjD-gW-MJO" secondAttribute="leading" constant="60" id="yap-W4-LYY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cjD-gW-MJO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DZi-S1-USY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1296.8" y="465.51724137931041"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="brX-v8-0fa">
             <objects>
@@ -317,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uz1-Vs-7BY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090.4000000000001" y="15.742128935532236"/>
+            <point key="canvasLocation" x="1319" y="-260"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3LG-58-iUJ">
@@ -350,6 +414,7 @@
         <image name="like_image" width="170" height="114"/>
         <image name="login_btn_bg" width="256" height="65"/>
         <image name="nope_image" width="197" height="130"/>
+        <image name="profile_bg" width="375" height="667"/>
         <image name="splash_icon" width="83" height="83"/>
     </resources>
 </document>

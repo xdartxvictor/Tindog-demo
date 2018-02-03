@@ -17,6 +17,7 @@
 		1F6A76F32017841800D340F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F6A76F22017841800D340F5 /* Assets.xcassets */; };
 		1F6A76F62017841800D340F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6A76F42017841800D340F5 /* LaunchScreen.storyboard */; };
 		1F6A77062018EC3700D340F5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6A77052018EC3700D340F5 /* HomeViewController.swift */; };
+		1F6C555420261C54007C9242 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C555320261C54007C9242 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1F6A76F52017841800D340F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F6A76F72017841800D340F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F6A77052018EC3700D340F5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1F6C555320261C54007C9242 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3EE1F43EA53A0FA1E43A0536 /* Pods-Tindog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tindog.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tindog/Pods-Tindog.release.xcconfig"; sourceTree = "<group>"; };
 		85D13CC427A91FD9507C2392 /* Pods-Tindog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tindog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tindog/Pods-Tindog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +105,7 @@
 			children = (
 				1F6A77052018EC3700D340F5 /* HomeViewController.swift */,
 				1F0E7CEC201A46390053716F /* LoginViewController.swift */,
+				1F6C555320261C54007C9242 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F6C555420261C54007C9242 /* ProfileViewController.swift in Sources */,
 				1F0E7CF0201A551C0053716F /* UIViewExt.swift in Sources */,
 				1F0E7CED201A46390053716F /* LoginViewController.swift in Sources */,
 				1F6A76EC2017841800D340F5 /* AppDelegate.swift in Sources */,
