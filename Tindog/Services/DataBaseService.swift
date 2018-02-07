@@ -46,7 +46,7 @@ class DataBaseService{
     }
     
     func createFirebaseDBMatch(uid: String, uid2: String){
-        Match_Ref.child(uid).updateChildValues(["uid2": uid2, "matchIsAccepter": false])
+        Match_Ref.child(uid).updateChildValues(["uid2": uid2, "matchIsAccepted": false])
     }
     
     
