@@ -29,10 +29,33 @@ class MatchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.secondUserMatchImage.round()
+        self.firstUserMatchImage.round()
         if let match = self.currentMatch{
             print("match:\(match)")
             if let profile = self.currentUserProfile{
-                self.secondUserMatchImage.sd_setImage(with: URL(string:profile.profileImage), completed: nil)
+                var secondID: String = ""
+                if profile.uid == match.uid{
+                    secondID = match.uid2
+                }else{
+                    secondID = match.uid
+                }
+                
+                DataBaseService.instance.getUserProfile(uid: secondID, handler: { (secondUser) in
+                    if let secondUser = secondUser{
+                        if profile.uid == match.uid{
+                            // init match
+                            self.firstUserMatchImage.sd_setImage(with: URL(string:profile.profileImage), completed: nil)
+                            self.secondUserMatchImage.sd_setImage(with: URL(string:secondUser.profileImage), completed: nil)
+                        }else{
+                            // match
+                            self.firstUserMatchImage.sd_setImage(with: URL(string:secondUser.profileImage), completed: nil)
+                            self.secondUserMatchImage.sd_setImage(with: URL(string:profile.profileImage), completed: nil)
+                            self.copyMatchLbl.text = "Tu mascota le gusta a  \(secondUser.displayName)"
+                        }
+                    }
+                })
+                
+                
                 
             }
         }

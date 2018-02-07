@@ -140,7 +140,10 @@ class HomeViewController: UIViewController {
             let userSnapshot = snapshot.children.flatMap{ UserModel(snapshot: $0 as! DataSnapshot)}
             for user in userSnapshot{
                 print("user: \(user.email)")
-                self.users.append(user)
+                if self.currentUserProfile?.uid != user.uid{
+                    self.users.append(user)
+                }
+                
             }
             if self.users.count > 0{
                 self.updateImage(uid: (self.users.first?.uid)!)
