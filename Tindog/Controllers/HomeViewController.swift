@@ -20,10 +20,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var homeWrapper: UIStackView!
     @IBOutlet weak var likeImage: UIImageView!
+    @IBOutlet weak var cardProfileImage: UIImageView!
+    @IBOutlet weak var cardProfileName: UILabel!
     
     let leftBtn = UIButton(type: .custom)
     
     var currentUserProfile: UserModel?
+    var users = [UserModel]()
     
     let revealingSplashScreen = RevealingSplashView(iconImage: UIImage(named:"splash_icon")!, iconInitialSize: CGSize(width:80, height:80), backgroundColor: UIColor.white)
     
@@ -58,6 +61,7 @@ class HomeViewController: UIViewController {
             DataBaseService.instance.observeUserProfile { (userDict) in
                 self.currentUserProfile = userDict
             }
+            self.getUsers()
         }
         
         // Do any additional setup after loading the view.
@@ -88,6 +92,28 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(profileViewController, animated: true)
     }
     
+    
+    func getUsers(){
+        DataBaseService.instance.User_Ref.observeSingleEvent(of: .value) { (snapshot) in
+            let userSnapshot = snapshot.children.flatMap{ UserModel(snapshot: $0 as! DataSnapshot)}
+            for user in userSnapshot{
+                print("user: \(user.email)")
+                self.users.append(user)
+            }
+        }
+    }
+    
+    func updateImage(uid: String){
+        DataBaseService.instance.User_Ref.child(uid).observeSingleEvent(of: .value) { (snapshot) in
+            if let userProfile = UserModel(snapshot: snapshot){
+                self.cardProfileImage.sd_setImage(with: URL(string: userProfile.profileImage), completed: nil)
+                self.cardProfileName.text = userProfile.displayName
+            }
+        }
+        
+    }
+    
+    
     @objc func cardDragged(gestureRecognizer : UIPanGestureRecognizer){
         let cardPoint = gestureRecognizer.translation(in: view)
         self.cardView.center = CGPoint(x: self.view.bounds.width / 2 + cardPoint.x , y: self.view.bounds.height / 2 + cardPoint.y)
@@ -116,6 +142,11 @@ class HomeViewController: UIViewController {
             if self.cardView.center.x > (self.view.bounds.width / 2 + 100){
                 print("like")
             }
+            // update image
+            if self.users.count > 0{
+                self.updateImage(uid: self.users[self.random(0..<self.users.count)].uid)
+            }
+           
             
             rotate = CGAffineTransform(rotationAngle: 0)
             finalTransform  = rotate.scaledBy(x: 1, y: 1)
@@ -125,6 +156,10 @@ class HomeViewController: UIViewController {
             
             self.cardView.center = CGPoint(x: self.homeWrapper.bounds.width / 2 , y: (self.homeWrapper.bounds.height / 2 - 30) )
         }
+    }
+    
+    func random(_ range: Range<Int>)-> Int{
+        return range.lowerBound + Int(arc4random_uniform(UInt32(range.upperBound - range.lowerBound)))
     }
 
     override func didReceiveMemoryWarning() {

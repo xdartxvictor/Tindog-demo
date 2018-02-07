@@ -133,6 +133,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="OAK-Bm-Qhq"/>
                     <connections>
+                        <outlet property="cardProfileImage" destination="XJk-1K-KTy" id="4AN-bA-viL"/>
+                        <outlet property="cardProfileName" destination="x5R-7A-oIS" id="7fP-S8-MJ0"/>
                         <outlet property="cardView" destination="pCV-zD-hts" id="cuV-9q-ml0"/>
                         <outlet property="homeWrapper" destination="9H4-iG-9rp" id="DQQ-bZ-Qag"/>
                         <outlet property="likeImage" destination="PCS-sz-VT7" id="XKJ-oE-fz5"/>
