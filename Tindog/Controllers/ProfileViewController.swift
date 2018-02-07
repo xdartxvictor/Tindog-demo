@@ -24,10 +24,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         self.profileImage.sd_setImage(with: URL(string: (self.currentUserProfile?.profileImage)!), completed: nil)
-        self.profileImage.layer.cornerRadius = self.profileImage.bounds.size.height / 2
-        self.profileImage.layer.borderColor = UIColor.white.cgColor
-        self.profileImage.layer.borderWidth = 1.0
-        self.profileImage.clipsToBounds = true
+        self.profileImage.round()
         
         self.profileEmailLbl.text = self.currentUserProfile?.email
         self.profileDisplaynameLbl.text = self.currentUserProfile?.displayName
