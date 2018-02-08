@@ -485,8 +485,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="doneActionBtn:" destination="XTY-CP-F6c" eventType="touchUpInside" id="IcJ-6e-mZr"/>
-                                            <action selector="doneBtnAction:" destination="XTY-CP-F6c" eventType="touchUpInside" id="eyU-v8-iRL"/>
+                                            <action selector="doneBtnAction:" destination="XTY-CP-F6c" eventType="touchUpInside" id="KT1-ju-dRs"/>
                                         </connections>
                                     </button>
                                 </subviews>

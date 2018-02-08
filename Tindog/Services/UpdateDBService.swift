@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import UIKit
 import Firebase
 
 class UpdateDBService {
     static let instance = UpdateDBService()
     
     func observeMatch(handler: @escaping(_ matchDict: MatchModel?) -> Void){
-        DataBaseService.instance.Match_Ref.observe(.value) { (snapshot) in
+        DataBaseService.instance.Match_Ref.observe(.value, with: { (snapshot) in
             if let matchSnapshot = snapshot.children.allObjects as? [DataSnapshot]{
                 if matchSnapshot.count > 0{
                     for match in matchSnapshot{
@@ -27,6 +28,6 @@ class UpdateDBService {
                     handler(nil)
                 }
             }
-        }
+        })
     }
 }

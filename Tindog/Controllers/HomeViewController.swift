@@ -63,23 +63,25 @@ class HomeViewController: UIViewController {
             }
             DataBaseService.instance.observeUserProfile { (userDict) in
                 self.currentUserProfile = userDict
+                UpdateDBService.instance.observeMatch(handler: { (matchDict) in
+                    if let match = matchDict{
+                        if let user = self.currentUserProfile{
+                            if user.userIsOnMatch == false{
+                                print("tienes un match")
+                                self.currentMatch = match
+                                self.changeRightBtn(active: true)
+                            }
+                        }
+                    }else{
+                        self.changeRightBtn(active: false)
+                    }
+                })
             }
             self.getUsers()
         }
         
-        UpdateDBService.instance.observeMatch { (matchDict) in
-            if let match = matchDict{
-                if let user = self.currentUserProfile{
-                    if user.userIsOnMatch == false{
-                        print("tienes un match")
-                        self.currentMatch = match
-                        self.changeRightBtn(active: true)
-                    }
-                }
-            }else{
-                self.changeRightBtn(active: false)
-            }
-        }
+        
+        
         self.rightBtn.setImage(UIImage(named:"match_inactive"), for: .normal)
         self.rightBtn.imageView?.contentMode = .scaleAspectFit
         let rightBtnBarButton = UIBarButtonItem(customView: self.rightBtn)
