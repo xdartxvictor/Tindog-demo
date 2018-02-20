@@ -505,12 +505,25 @@
                                     <action selector="closeModal:" destination="XTY-CP-F6c" eventType="touchUpInside" id="6nc-8d-W8L"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opE-Fl-o7e">
+                                <rect key="frame" x="15" y="50" width="23" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="kIU-0V-Fxu"/>
+                                    <constraint firstAttribute="width" constant="23" id="zKU-U9-LVj"/>
+                                </constraints>
+                                <state key="normal" image="close_modal"/>
+                                <connections>
+                                    <action selector="closeBtn:" destination="XTY-CP-F6c" eventType="touchUpInside" id="hTo-pc-h8s"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="opE-Fl-o7e" firstAttribute="leading" secondItem="y2V-H3-gip" secondAttribute="leading" constant="15" id="2p7-Ix-jXe"/>
                             <constraint firstItem="y2V-H3-gip" firstAttribute="trailing" secondItem="9od-Xa-MSf" secondAttribute="trailing" constant="45" id="2wx-by-hXd"/>
                             <constraint firstItem="9od-Xa-MSf" firstAttribute="centerX" secondItem="eY2-1Q-SbM" secondAttribute="centerX" id="3uB-kf-MFm"/>
                             <constraint firstItem="ccO-04-V0e" firstAttribute="leading" secondItem="y2V-H3-gip" secondAttribute="leading" constant="15" id="AkR-jt-uRQ"/>
+                            <constraint firstItem="opE-Fl-o7e" firstAttribute="top" secondItem="y2V-H3-gip" secondAttribute="top" constant="30" id="FvG-oS-pXK"/>
                             <constraint firstItem="ccO-04-V0e" firstAttribute="top" secondItem="y2V-H3-gip" secondAttribute="top" constant="10" id="Jfw-68-N5p"/>
                             <constraint firstItem="9od-Xa-MSf" firstAttribute="top" secondItem="y2V-H3-gip" secondAttribute="top" constant="60" id="b02-Yq-zVP"/>
                             <constraint firstItem="3vX-hx-LDK" firstAttribute="leading" secondItem="y2V-H3-gip" secondAttribute="leading" id="dfy-oa-CDy"/>
@@ -522,6 +535,7 @@
                         <viewLayoutGuide key="safeArea" id="y2V-H3-gip"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="3vX-hx-LDK" id="Bge-hf-TTe"/>
                         <outlet property="copyMatchLbl" destination="uIB-gG-2YU" id="81p-sA-VVj"/>
                         <outlet property="doneBtn" destination="cof-dj-xnN" id="XRp-3U-qff"/>
                         <outlet property="firstUserMatchImage" destination="iY0-iu-N8B" id="l8x-mH-GHT"/>

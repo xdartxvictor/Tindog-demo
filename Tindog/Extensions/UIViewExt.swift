@@ -27,4 +27,11 @@ extension UIView{
         }, completion: nil)
         
     }
+    func screenshot() -> UIImage {
+        UIGraphicsBeginImageContext(self.frame.size)
+        self.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
+    }
 }

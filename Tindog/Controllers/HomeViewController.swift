@@ -133,6 +133,7 @@ class HomeViewController: UIViewController {
         let matchViewController = storyBoard.instantiateViewController(withIdentifier: "matchVC") as! MatchViewController
         matchViewController.currentUserProfile = self.currentUserProfile
         matchViewController.currentMatch = self.currentMatch
+        matchViewController.lastImage = self.view.screenshot()
         present(matchViewController, animated: true, completion: nil)
     }
     

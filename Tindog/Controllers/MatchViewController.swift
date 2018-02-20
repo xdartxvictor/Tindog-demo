@@ -14,9 +14,14 @@ class MatchViewController: UIViewController {
     @IBOutlet weak var firstUserMatchImage: UIImageView!
     @IBOutlet weak var secondUserMatchImage: UIImageView!
     @IBOutlet weak var doneBtn: UIButton!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBAction func closeBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     var currentUserProfile: UserModel?
     var currentMatch: MatchModel?
+    var lastImage: UIImage?
     
     
     
@@ -25,6 +30,10 @@ class MatchViewController: UIViewController {
     @IBAction func doneBtnAction(_ sender: Any) {
         if let currentMatch = self.currentMatch{
             if currentMatch.matchIsAccepted{
+                let share = [self.view.screenshot(), "Ya complete mi curso y este es el proyecto final", "platzi.com/ios"] as [Any]
+                let activityViewController = UIActivityViewController(activityItems: share, applicationActivities: nil)
+                activityViewController.popoverPresentationController?.sourceView = self.view
+                self.present(activityViewController, animated: true, completion: nil)
                 
             }else{
                 DataBaseService.instance.updateFirebaseDBMatch(uid: currentMatch.uid)
@@ -38,6 +47,10 @@ class MatchViewController: UIViewController {
         super.viewDidLoad()
         self.secondUserMatchImage.round()
         self.firstUserMatchImage.round()
+        if let bgImage = lastImage{
+            self.backgroundImage.image = bgImage
+        }
+        
         if let match = self.currentMatch{
             print("match:\(match)")
             if let profile = self.currentUserProfile{
