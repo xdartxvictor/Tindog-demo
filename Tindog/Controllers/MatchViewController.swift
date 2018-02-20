@@ -30,7 +30,7 @@ class MatchViewController: UIViewController {
     @IBAction func doneBtnAction(_ sender: Any) {
         if let currentMatch = self.currentMatch{
             if currentMatch.matchIsAccepted{
-                let share = [self.view.screenshot(), "Ya complete mi curso y este es el proyecto final", "platzi.com/ios"] as [Any]
+                let share = [self.view.screenshot(), "Acabo de crear una aplicación en iOS! Este es mi proyecto del curso en @Platzi, te invito conocerlo:", "platzi.com/ios"] as [Any]
                 let activityViewController = UIActivityViewController(activityItems: share, applicationActivities: nil)
                 activityViewController.popoverPresentationController?.sourceView = self.view
                 self.present(activityViewController, animated: true, completion: nil)
