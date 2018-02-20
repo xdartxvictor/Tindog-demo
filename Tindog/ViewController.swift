@@ -7,11 +7,19 @@
 //
 
 import UIKit
+class NavigationImageView: UIImageView{
+    override func sizeThatFits(_ size: CGSize) -> CGSize {
+        return CGSize(width: 76, height: 39)
+    }
+}
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let titleView = NavigationImageView()
+        titleView.image = UIImage(named:"Actions")
+        self.navigationItem.titleView = titleView
         // Do any additional setup after loading the view, typically from a nib.
     }
 
