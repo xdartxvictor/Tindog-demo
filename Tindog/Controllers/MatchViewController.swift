@@ -64,6 +64,11 @@ class MatchViewController: UIViewController {
                             self.copyMatchLbl.text = "Tu mascota le gusta a  \(secondUser.displayName)"
                             self.doneBtn.alpha = 1
                         }
+                        if match.matchIsAccepted{
+                            self.copyMatchLbl.text = "\(profile.displayName) y \(secondUser.displayName) quieren conocerse "
+                            self.doneBtn.setTitle("Compartir", for: .normal)
+                            self.doneBtn.alpha = 1
+                        }
                     }
                 })
                 
